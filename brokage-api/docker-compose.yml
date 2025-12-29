@@ -1,0 +1,9 @@
+services:
+  brokage-api:
+    build: .
+    container_name: brokage-api
+    ports:
+      - "8080:8080"
+    environment:
+      - JWT_SECRET=your-super-secret-key-change-in-production
+    restart: unless-stopped
